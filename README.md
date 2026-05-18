@@ -48,15 +48,12 @@ Reload Pi after install: `/reload`
 
 ## Shell policy
 
-The extension automatically injects a shell usage policy into every system prompt. The policy covers:
+The extension injects a minimal Windows-awareness policy into the system prompt:
 
-- **Bash** → Git workflows, Unix pipelines, `grep`/`sed`/`awk`
-- **PowerShell** → Windows paths, `$env`, `.exe`/`.cmd`/`.bat`, process management, Windows services
-- **Path handling** → don't convert `C:\` to `/mnt/c/`, don't assume WSL
+- **Path handling** → don't pass `C:\` paths to Bash, don't assume WSL
 - **Long-running** → use `win_start_process` instead of `npm run dev &`
-- **Failure diagnosis** → identify shell, cwd, exit code, stderr before retrying
 
-See `prompts/windows-shell-policy.md` for the full policy.
+Each tool also has its own `promptGuidelines` telling the agent when to use it. The extension does NOT dictate how to use Bash, git, grep, find, or other Pi-native tools.
 
 ## Structure
 
@@ -67,8 +64,6 @@ process-registry.ts       ← Persistent JSON registry for managed processes
 output.ts                 ← Output truncation and tail reading
 paths.ts                  ← Registry and log path helpers
 types.ts                  ← Shared TypeScript interfaces
-prompts/
-  windows-shell-policy.md  ← Injected shell policy
 ```
 
 ## Requirements

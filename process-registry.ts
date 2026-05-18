@@ -192,19 +192,3 @@ export async function cleanupRegistry(options: {
     keptRunning: remaining.length,
   };
 }
-
-/**
- * Check if a process with given PID is still alive.
- * Returns the process status or null if not found.
- */
-export async function checkProcessAlive(pid: number): Promise<"running" | "exited" | "unknown"> {
-  try {
-    // Try using Node's process kill check
-    process.kill(pid, 0);
-    return "running";
-  } catch {
-    // ESRCH means process doesn't exist
-    // Other errors may mean permission issues
-    return "exited";
-  }
-}

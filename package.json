@@ -1,6 +1,6 @@
 {
   "name": "@gogomi/pi-windows-shell",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "type": "module",
   "description": "Windows PowerShell and process-management tools for Pi coding agent.",
   "main": "index.ts",
@@ -13,6 +13,7 @@
     "types.ts",
     "tsconfig.json",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE"
   ],
   "keywords": [
