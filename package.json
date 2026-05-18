@@ -11,7 +11,6 @@
     "paths.ts",
     "process-registry.ts",
     "types.ts",
-    "prompts/windows-shell-policy.md",
     "tsconfig.json",
     "README.md",
     "LICENSE"
@@ -31,9 +30,6 @@
   "pi": {
     "extensions": [
       "./index.ts"
-    ],
-    "prompts": [
-      "./prompts"
     ]
   },
   "dependencies": {
