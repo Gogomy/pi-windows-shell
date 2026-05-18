@@ -1,0 +1,48 @@
+{
+  "name": "@gogomi/pi-windows-shell",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Windows PowerShell and process-management tools for Pi coding agent.",
+  "main": "index.ts",
+  "files": [
+    "index.ts",
+    "shell.ts",
+    "output.ts",
+    "paths.ts",
+    "process-registry.ts",
+    "types.ts",
+    "prompts/windows-shell-policy.md",
+    "tsconfig.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "powershell",
+    "windows",
+    "process-management"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gogomy/pi-windows-shell.git"
+  },
+  "license": "MIT",
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "prompts": [
+      "./prompts"
+    ]
+  },
+  "dependencies": {
+    "@sinclair/typebox": "^0.34.0"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
